@@ -16,7 +16,7 @@ def guess_game():
             if lower_bound >= high_bound :
                 print("numbers are not set in the correct order. Try again")
                 continue
-            break
+            break  
         except ValueError:
             print("Invalid input. Please enter valid integers for the bounds." )
 
@@ -55,16 +55,20 @@ def guess_game():
 def main():
     while True:
         guess_game()
-        
-        restart_game = input("Want to play again? Y/N ").capitalize()
 
-        if restart_game != "Y":
-            print("Thanks for playing! Goodbye")
-            break
+        while True:
+            restart_game = input("Want to play again? Y/N ").capitalize()
             
+            if restart_game == "N":
+                print("Thanks for playing! Goodbye")
+                return
+            elif restart_game == "Y":
+                break
+            else:
+                print("Invalid input! Enter: Y/N")
 
+        
 
 if __name__ == "__main__":
     print("Welcome to the Guessing Game!")
     main()
-
