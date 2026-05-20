@@ -1,6 +1,7 @@
 import subprocess
 import datetime
 
+#Quick System Checker
 
 time = datetime.datetime.now().strftime("%m-%d-%y at %H:%M:%S")
 
